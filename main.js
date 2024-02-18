@@ -65,3 +65,20 @@ const frankie = createPerson("Frankie");
 frankie.name;
 frankie.introduceSelf();
 // "Hi! I'm Frankie."
+
+function Person(name) {
+    this.name = name;
+    this.introduceSelf = function () {
+      console.log(`Hi! I'm ${this.name}.`);
+    };
+  }
+
+const salva1 = new Person("Salva");
+salva.name;
+salva.introduceSelf();
+// "Hi! I'm Salva."
+
+const frankie1 = new Person("Frankie");
+frankie.name;
+frankie.introduceSelf();
+// "Hi! I'm Frankie."
