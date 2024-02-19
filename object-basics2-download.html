@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Object basics: Task 2</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    let bandInfo;
+
+    // Add your code here
+    const pinkFloyd = {
+      name: "Pink Floyd",
+      nationality: "United Kingdom",
+      genre: "Progressive rock",
+      members: 4,
+      formed: 1965,
+      split: false,
+      albums : [{ name: "The Dark Side of the Moon", released: 1973 },
+                { name: "Wish You Were Here", released: 1975 },
+                { name: "The Wall", released: 1979 },
+                { name: "Animals", released: 1977 },
+                { name: "Meddle", released: 1971 },
+      ]
+    }
+
+    const firstAlbum = pinkFloyd.albums[0];
+    bandInfo = `${pinkFloyd.name} is a ${pinkFloyd.nationality}n band formed in 
+    ${pinkFloyd.formed}. They are known for their ${pinkFloyd.genre} style. 
+    The band consisted of ${pinkFloyd.members} members and ${pinkFloyd.split ? 
+      "split up" : "is still together"}. Their first album, "${firstAlbum.name}", 
+      was released in ${firstAlbum.released}.`;
+
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+    let para1 = document.createElement('p');
+    para1.textContent = bandInfo;
+    section.appendChild(para1);
+  </script>
+
+</html>
